@@ -1,17 +1,17 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import theme from '../styles/theme';
-import { MainContainer, TextContainer, Text} from '../styles/StyledComponents';
+import { MainContainer, TextContainer, Text, HighlightText } from '../styles/StyledComponents';
 
 function Main(){
     return (
         <MainContainer>
             <TextContainer>
-                <Text>Hello, I'm <span>Josiah Roa</span>,</Text>
+                <Text>Hello, I'm <HighlightText>Josiah Roa</HighlightText>,</Text>
                 <Text>I'm a full-stack web developer.</Text>
             </TextContainer>
             <Particles
-                height={window.outerHeight}
+                height= 'calc(100vh - 85px)'
                 style={{
                     backgroundColor: `${theme.colors.darkGrey}`
                 }}
@@ -33,7 +33,7 @@ function Main(){
                             "speed": 0.05
                         },
                         "size": {
-                            "value": 1
+                            "value": 1.5
                         },
                         "opacity": {
                             "anim": {
