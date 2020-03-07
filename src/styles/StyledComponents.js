@@ -14,9 +14,10 @@ export const HeaderContainer = styled.header`
     background-color: ${theme.colors.darkBlue};
     border-bottom: 5px solid ${theme.colors.lightBlue};
     width: 100%;
-    height: 80px;
+    height: ${props => props.expand ? '440px' : '80px'};
     display: flex;
-    align-items: center;
+    flex-direction: ${props => props.expand ? 'column' : 'row'};
+    align-items: ${props => props.expand ? 'flex-start' : 'center'};
     justify-content: space-between;
 `;
 
@@ -34,13 +35,29 @@ export const HeaderImage = styled.img`
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${props => props.selected};
-    margin: 0 20px;
+    margin: ${props => props.mobile ? '20px 0' : '0 20px'};
     font-size: 1.2rem;
     font-family: ${theme.font};
+    text-align: center;
     &:hover{
         color: ${theme.colors.pink};
         transition: color 1s ease;
     };
+`;
+
+export const HamburgerContainer = styled.div`
+    cursor: pointer;
+    margin-right: 20px;
+`;
+
+export const MobileContainer = styled(HeaderContainer)`
+    border: none
+`;
+
+export const MobileNavContainer = styled.nav`
+    display: ${props => props.open ? 'flex' : 'none'};
+    flex-direction: column;
+    margin: 0 auto;
 `;
 
 

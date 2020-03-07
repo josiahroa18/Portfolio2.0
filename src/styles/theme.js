@@ -13,8 +13,8 @@ const theme = {
 
     },
     breakpoints: {
-        tablet: '@media (min-width: 500px)',
-        desktop: '@media (min-width: 800px)'
+        tablet: '@media (min-device-width: 500px)',
+        desktop: '@media (min-device-width: 800px)'
     },
     font: 'Nunito, sans-serif'
 }
