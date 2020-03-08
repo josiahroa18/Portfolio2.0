@@ -10,6 +10,7 @@ export const AppContainer = styled.div`
 `;
 
 /* Header Styles */
+// height: ${props => props.expand ? '440px' : '80px'};
 export const HeaderContainer = styled.header`
     background-color: ${theme.colors.darkBlue};
     border-bottom: 5px solid ${theme.colors.lightBlue};
@@ -51,11 +52,14 @@ export const HamburgerContainer = styled.div`
 `;
 
 export const MobileContainer = styled(HeaderContainer)`
+    position: absolute;
     border: none
 `;
 
 export const MobileNavContainer = styled.nav`
     display: ${props => props.open ? 'flex' : 'none'};
+    position: relative;
+    top: 80px;
     flex-direction: column;
     margin: 0 auto;
 `;
@@ -80,7 +84,6 @@ export const Text = styled.h1`
     font-family: ${theme.font};
     color: ${theme.colors.white};
     font-size: 3rem;
-    margin-left: 50px;
     text-align: center;
 `;
 

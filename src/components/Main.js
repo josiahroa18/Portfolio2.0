@@ -1,15 +1,23 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import { Motion, spring } from 'react-motion';
 import theme from '../styles/theme';
 import { MainContainer, TextContainer, Text, HighlightText } from '../styles/StyledComponents';
 
 function Main(){
     return (
         <MainContainer>
-            <TextContainer>
-                <Text>Hello, I'm <HighlightText>Josiah Roa</HighlightText>,</Text>
-                <Text>I'm a full-stack web developer.</Text>
-            </TextContainer>
+            <Motion
+                defaultStyle={{opacity: 0}}
+                style={{opacity: spring(1, {stiffness: 10, damping: 10})}}
+            >
+            {style => (
+                <TextContainer style={{opacity: style.opacity}}>
+                    <Text>Hello, I'm <HighlightText>Josiah Roa</HighlightText>,</Text>
+                    <Text>I'm a full-stack web developer.</Text>
+                </TextContainer>
+            )}
+            </Motion>
             <Particles
                 height= 'calc(100vh - 85px)'
                 style={{
