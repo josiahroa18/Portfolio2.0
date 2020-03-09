@@ -8,7 +8,6 @@ import { useHistory } from 'react-router-dom';
 function Header(){
     const [ selection, setSelection ] = useState(0);
     const history = useHistory();
-    console.log(history);
 
     function handleClick(e){
         setSelection(e.target.id * 1)
@@ -34,8 +33,11 @@ function Header(){
             case '/resume':
                 setSelection(5);
                 break;
+            default:
+                setSelection(0);
+                break;
         }
-    }, [])
+    }, [history.location.pathname])
 
     const isDesktop = useMediaQuery({
         query: '(min-width: 800px)'

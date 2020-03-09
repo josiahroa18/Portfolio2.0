@@ -1,19 +1,19 @@
 const data = [
     {
+        id: 1,
         projectName: 'OptimalBNB', 
         techStack: 'React.js',
         projectDescription: 'Project description goes here',
         roles: ['role 1 goes here', 'role 2 goes here'],
-        imgThumbnail: '../../assets/projectThumbnails/url',
-        img: '../../assets/projectImage/url' 
+        img: '/assets/optimal-bnb.png',
     },
     {
-        projectName: 'OptimalBNB', 
-        techStack: 'React.js',
+        id: 2,
+        projectName: 'Symphinity', 
+        techStack: 'HTML, LESS, JavaScript',
         projectDescription: 'Project description goes here',
         roles: ['role 1 goes here', 'role 2 goes here'],
-        imgThumbnail: '../../assets/projectThumbnails/url',
-        img: '../../assets/projectImage/url' 
+        img: '/assets/symphinity.png',
     }
 ]
 

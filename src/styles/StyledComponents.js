@@ -114,10 +114,13 @@ export const Text = styled.h1`
     text-align: center;
 `;
 
-export const HighlightText = styled(Text)`
+export const HighlightText = styled.span`
     color: ${theme.colors.pink};
     margin: 0;
     display: inline;
+    font-size: ${theme.fontSizes.title};
+    text-align: center;
+    font-family: ${theme.font};
 `;
 
 /* Project Page Styles */
@@ -126,4 +129,37 @@ export const ProjectContainer = styled.div`
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+`;
+
+export const ProjectCardContainer = styled.div`
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    position: relative;
+`;
+
+export const ProjectImage = styled.img`
+    width: 300px;
+    height: 300px;
+    filter: ${props => props.hover ? 'blur(2px)' : 'none'};
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+`;
+
+export const ProjectButton = styled.button`
+    display: ${props => props.hover ? 'block' : 'none'};
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    font-family: ${theme.font};
+    font-size: 2rem;
+    border: 2px solid ${theme.colors.lightBlue};
+    color: ${theme.colors.pink};
+    cursor: pointer;
+    outline: none;
 `;
