@@ -31,8 +31,8 @@ function MobileNav({profileImage, handleClick, selection}){
                     </HamburgerContainer>
                 </MobileContainer>
                 <Motion
-                    defaultStyle={{top: -200}}
-                    style={{top: spring(open ? 80 : -200)}}
+                    defaultStyle={{top: -300}}
+                    style={{top: spring(open ? 80 : -300)}}
                 >
                     {style => (
                         <MobileNavContainer open={open} style={{top: style.top}}>

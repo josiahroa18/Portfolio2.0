@@ -9,8 +9,35 @@ export const AppContainer = styled.div`
     margin: 0;
 `;
 
+export const ContentContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+`;
+
+/* Title Styles */
+export const TitleContainer = styled.div`
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const TitleStyle = styled.h1`
+    color: ${theme.colors.black};
+    font-size: 3rem;
+    font-family: ${theme.font};
+`;
+
+export const Bar = styled.div`
+    position: relative;
+    width: 100px;
+    height: 5px;
+    margin-top: 10px;
+    background-color: ${theme.colors.black};
+`;
+
 /* Header Styles */
-// height: ${props => props.expand ? '440px' : '80px'};
 export const HeaderContainer = styled.header`
     background-color: ${theme.colors.darkBlue};
     border-bottom: 5px solid ${theme.colors.lightBlue};
@@ -83,7 +110,7 @@ export const TextContainer = styled.div`
 export const Text = styled.h1`
     font-family: ${theme.font};
     color: ${theme.colors.white};
-    font-size: 3rem;
+    font-size: ${theme.fontSizes.title};
     text-align: center;
 `;
 
@@ -91,4 +118,12 @@ export const HighlightText = styled(Text)`
     color: ${theme.colors.pink};
     margin: 0;
     display: inline;
+`;
+
+/* Project Page Styles */
+export const ProjectContainer = styled.div`
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
 `;

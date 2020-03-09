@@ -4,10 +4,11 @@ const theme = {
         darkBlue: '#1A242F',
         pink: '#E3266D',
         lightBlue: '#07C2CA',
-        white: '#FFFFFF'
+        white: '#FFFFFF',
+        black: '#444649'
     },
     fontSizes: {
-
+        title: '3rem'
     },
     breakpoints: {
         tablet: '@media (max-width: 799px)',
