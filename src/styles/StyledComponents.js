@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import theme from './theme';
+import { Github, Twitter, Linkedin, Instagram } from '@styled-icons/boxicons-logos'
 
-/* App Styles */
+/* ------- App Styles ------- */
 export const AppContainer = styled.div`
     width: 100%;
     height: 100%;
@@ -15,7 +16,7 @@ export const ContentContainer = styled.div`
     flex-direction: column;
 `;
 
-/* Title Styles */
+/* ------- Title Styles ------- */
 export const TitleContainer = styled.div`
     margin: 50px auto;
     display: flex;
@@ -37,7 +38,7 @@ export const Bar = styled.div`
     background-color: ${theme.colors.black};
 `;
 
-/* Header Styles */
+/* ------- Header Styles ------- */
 export const HeaderContainer = styled.header`
     background-color: ${theme.colors.darkBlue};
     border-bottom: 5px solid ${theme.colors.lightBlue};
@@ -92,10 +93,9 @@ export const MobileNavContainer = styled.nav`
 `;
 
 
-/* Main Page Styles */
+/* ------- Main Page Styles ------- */
 export const MainContainer = styled.div`
     position: relative;
-    z-index: -1;
     height: calc(100vh - 85px);
 `;
 
@@ -122,8 +122,43 @@ export const HighlightText = styled.span`
     text-align: center;
     font-family: ${theme.font};
 `;
+/* ------- Social Bar Styles ------- */
+export const SocialBarContainer = styled.div`
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+`;
 
-/* Project Page Styles */
+export const SocialLink = styled.a`
+    text-decoration: none;
+    cursor: pointer;
+`;
+
+export const GitHubLogo = styled(Github)`
+    color: ${theme.colors.lightBlue};
+    width: 40px;
+`;
+
+export const TwitterLogo = styled(Twitter)`
+    color: ${theme.colors.lightBlue};
+    width: 40px;
+`;
+
+export const InstagramLogo = styled(Instagram)`
+    color: ${theme.colors.lightBlue};
+    width: 40px;
+`;
+
+export const LinkedInLogo = styled(Linkedin)`
+    color: ${theme.colors.lightBlue};
+    width: 40px;
+`;
+
+
+/* ------- Project Page Styles ------- */
 export const ProjectContainer = styled.div`
     margin: 0 auto;
     width: 80%;

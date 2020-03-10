@@ -3,6 +3,7 @@ import { Motion, spring } from 'react-motion';
 import Title from '../Title';
 import ProjectCard from './ProjectCard';
 import ProjectDetails from './ProjectDetails';
+import SocialBar from '../SocialBar';
 import { ContentContainer, ProjectContainer } from '../../styles/StyledComponents';
 import data from '../../data/data';
 
@@ -31,7 +32,6 @@ function ProjectPage(){
     function handleClick(selectedId){
         setOpen(!open);
         setCurrentId(selectedId);
-        console.log(selectedId);
     }
 
     function handleToggle(){
@@ -40,6 +40,7 @@ function ProjectPage(){
 
     return(
         <ContentContainer>
+            <SocialBar/>
             <Title title={'Projects'}></Title>
             <Motion
                 defaultStyle={{opacity: 0}}
