@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 import ProjectDetails from './ProjectDetails';
 import SocialBar from '../SocialBar';
 import { ContentContainer, ProjectContainer } from '../../styles/StyledComponents';
-import data from '../../data/data';
+import { data } from '../../data/data';
 
 // Material UI Imports 
 import Backdrop from '@material-ui/core/Backdrop';
@@ -40,7 +40,6 @@ function ProjectPage(){
 
     return(
         <ContentContainer>
-            <SocialBar/>
             <Title title={'Projects'}></Title>
             <Motion
                 defaultStyle={{opacity: 0}}

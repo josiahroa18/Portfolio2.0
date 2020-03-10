@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import theme from './theme';
-import { Github, Twitter, Linkedin, Instagram } from '@styled-icons/boxicons-logos'
+import { Github, Twitter, Linkedin, Instagram, Javascript } from '@styled-icons/boxicons-logos'
+import { GitBranch } from '@styled-icons/boxicons-regular';
+import { DeveloperBoard, DataUsage } from '@styled-icons/material';
+import { PersonDoneOutline } from '@styled-icons/evaicons-outline';
+import { Database } from '@styled-icons/fa-solid';
 
 /* ------- App Styles ------- */
 export const AppContainer = styled.div`
@@ -124,12 +128,14 @@ export const HighlightText = styled.span`
 `;
 /* ------- Social Bar Styles ------- */
 export const SocialBarContainer = styled.div`
-    position: absolute;
+    position: fixed;
     right: 20px;
     bottom: 20px;
     display: flex;
-    width: 200px;
     justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
 `;
 
 export const SocialLink = styled.a`
@@ -278,5 +284,59 @@ export const DetailsLink = styled.a`
     display: inline-block;
     font-family: ${theme.font};
     color: ${theme.colors.lightBlue};
+`;
 
+/* ------- Skill Page Styles ------- */
+export const SkillContainer = styled(ProjectContainer)`
+`;
+
+export const SkillCardContainer = styled.div`
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+`;
+
+export const SkillHeader = styled.h1`
+    font-family: ${theme.font};
+    font-size: 1.5rem;
+`;
+
+export const SkillText = styled.p`
+    font-family: ${theme.font};
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: ${theme.colors.darkBlue};
+    text-align: center;
+`;
+
+export const JavaScriptIcon = styled(Javascript)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
+`;
+
+export const BackEndIcon = styled(DeveloperBoard)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
+`;
+
+export const VersionControlIcon = styled(GitBranch)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
+`;
+
+export const IndustryKnowledgeIcon = styled(PersonDoneOutline)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
+`;
+
+export const DataStructuresIcon = styled(DataUsage)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
+`;
+
+export const DataBaseIcon = styled(Database)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
 `;

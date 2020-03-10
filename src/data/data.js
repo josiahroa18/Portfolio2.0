@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         id: 1,
         projectName: 'OptimalBNB', 
@@ -21,4 +21,35 @@ const data = [
     }
 ]
 
-export default data;
+export const skillData = [
+    {
+        id: 1,
+        skillHeader: 'Front-End Engineering',
+        skills: 'React.js, HTML, CSS, LESS, SASS'
+    },
+    {
+        id: 2,
+        skillHeader: 'Back-End Engineering',
+        skills: 'Node.js, Postman API'
+    },
+    {
+        id: 3,
+        skillHeader: 'Version Control',
+        skills: 'GitHub'
+    },
+    {
+        id: 4,
+        skillHeader: 'Industry Knowledge',
+        skills: 'Agile Project Management, Software Development'
+    },
+    {
+        id: 5,
+        skillHeader: 'Data Structures',
+        skills: 'JavaScript, C++, Python'
+    },
+    {
+        id: 6,
+        skillHeader: 'Databases',
+        skills: 'MongoDB, mySQL'
+    }
+]
