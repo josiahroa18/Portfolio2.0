@@ -142,18 +142,29 @@ export const ProjectCardContainer = styled.div`
 export const ProjectImage = styled.img`
     width: 300px;
     height: 300px;
-    filter: ${props => props.hover ? 'blur(2px)' : 'none'};
+    filter: ${props => props.hover ? 'blur(5px)' : 'none'};
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 `;
 
+export const ProjectTitle = styled.h1`
+    display: ${props => props.hover ? 'block' : 'none'};
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: ${theme.font};
+    font-size: 2rem;
+    color: ${theme.colors.darkBlue};
+    text-shadow: 0 0 3px ${theme.colors.lightBlue}, 0 0 3px ${theme.colors.lightBlue}; 
+`;
+
 export const ProjectButton = styled.button`
     display: ${props => props.hover ? 'block' : 'none'};
     position: absolute;
-    top: 50%;
     left: 50%;
+    bottom: 70px;
     transform: translate(-50%, -50%);
     background: none;
     font-family: ${theme.font};
