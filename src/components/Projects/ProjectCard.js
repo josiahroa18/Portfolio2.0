@@ -49,7 +49,7 @@ function ProjectCard(props){
                 {style => (
                     <ProjectButton 
                         hover={onHover} 
-                        onClick={props.handleClick}
+                        onClick={() => props.handleClick(props.data.id)}
                         id={props.data.id}
                         style={{bottom: style.bottom}}
                     >Learn More

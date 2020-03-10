@@ -164,7 +164,6 @@ export const ProjectButton = styled.button`
     display: ${props => props.hover ? 'block' : 'none'};
     position: absolute;
     left: 50%;
-    bottom: 70px;
     transform: translate(-50%, -50%);
     background: none;
     font-family: ${theme.font};
@@ -173,4 +172,53 @@ export const ProjectButton = styled.button`
     color: ${theme.colors.pink};
     cursor: pointer;
     outline: none;
+`;
+
+export const DetailsContainer = styled.div`
+    position: relative;
+    width: 30%;
+    min-width: 300px;
+    margin: 0 auto;
+    background-color: ${theme.colors.darkGrey};
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+`;
+
+export const DetailsTitle = styled.h1`
+    font-family: ${theme.font};
+    font-size: 2rem;
+    color: ${theme.colors.white};
+`;
+
+export const DetailsTech = styled.p`
+    font-family: ${theme.font};
+    font-size: 1.1rem;
+    color: ${theme.colors.lightBlue};
+    margin: 5px 0;
+`;
+
+export const DetailsDescription = styled.p`
+    font-family: ${theme.font};
+    font-size: 1rem;
+    color: ${theme.colors.white};
+    margin: 20px 0;
+`;
+
+export const Exit = styled.div`
+    font-family: ${theme.font};
+    position: absolute;
+    font-size: 2rem;
+    color: ${theme.colors.pink};
+    right: 20px;
+    cursor: pointer;
+`;
+
+export const DetailsListContainer = styled.ul`
+
+`;
+
+export const DetailsListItem = styled.li`
+    font-family: ${theme.font};
 `;
