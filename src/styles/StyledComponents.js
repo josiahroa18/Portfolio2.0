@@ -199,11 +199,18 @@ export const DetailsTech = styled.p`
     margin: 5px 0;
 `;
 
+export const DetailsSubHeading = styled.h2`
+    font-family: ${theme.font};
+    font-size: 1.2rem;
+    color: ${theme.colors.white};
+    margin-top: 20px;
+    margin-bottom: 10px;
+`;
+
 export const DetailsDescription = styled.p`
     font-family: ${theme.font};
     font-size: 1rem;
     color: ${theme.colors.white};
-    margin: 20px 0;
 `;
 
 export const Exit = styled.div`
@@ -216,9 +223,25 @@ export const Exit = styled.div`
 `;
 
 export const DetailsListContainer = styled.ul`
-
+    list-style-type: disc;
+    list-style: inside;
 `;
 
 export const DetailsListItem = styled.li`
     font-family: ${theme.font};
+    margin-bottom: 5px;
+`;
+
+export const LinkContainer = styled.div`
+    display: flex;
+    width: 250px;
+    margin: 20px auto;
+    justify-content: space-between;
+`;
+
+export const DetailsLink = styled.a`
+    display: inline-block;
+    font-family: ${theme.font};
+    color: ${theme.colors.lightBlue};
+
 `;
