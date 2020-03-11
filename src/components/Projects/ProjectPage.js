@@ -3,7 +3,6 @@ import { Motion, spring } from 'react-motion';
 import Title from '../Title';
 import ProjectCard from './ProjectCard';
 import ProjectDetails from './ProjectDetails';
-import SocialBar from '../SocialBar';
 import { ContentContainer, ProjectContainer } from '../../styles/StyledComponents';
 import { data } from '../../data/data';
 

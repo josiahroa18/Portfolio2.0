@@ -17,8 +17,8 @@ function ProjectCard(props){
 
     useEffect(() => {
         if(onHover){
-            setTopAnimation(120);
-            setBottomAnimation(70);
+            setTopAnimation(50);
+            setBottomAnimation(50);
         }else{
             setTopAnimation(0);
             setBottomAnimation(0);
