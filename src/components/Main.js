@@ -8,7 +8,6 @@ import { MainContainer, TextContainer, Text, HighlightText } from '../styles/Sty
 function Main(){
     return (
         <MainContainer>
-            <SocialBar/>
             <Motion
                 defaultStyle={{opacity: 0}}
                 style={{opacity: spring(1, {stiffness: 10, damping: 10})}}

@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         id: 1,
         projectName: 'OptimalBNB', 
@@ -17,8 +17,39 @@ const data = [
         roles: ['Devlope Landing Page', 'Link to web-application'],
         img: '/assets/symphinity.png',
         github: 'https://github.com/spotify-song-suggester-2/marketing-page',
-        deployed: ''
+        deployed: 'https://symphinity-landing.netlify.com/'
     }
 ]
 
-export default data;
+export const skillData = [
+    {
+        id: 1,
+        skillHeader: 'Front-End Engineering',
+        skills: 'React.js, HTML, CSS, LESS, SASS'
+    },
+    {
+        id: 2,
+        skillHeader: 'Back-End Engineering',
+        skills: 'Node.js, Postman API'
+    },
+    {
+        id: 3,
+        skillHeader: 'Version Control',
+        skills: 'GitHub'
+    },
+    {
+        id: 4,
+        skillHeader: 'Industry Knowledge',
+        skills: 'Agile Project Management, Software Development'
+    },
+    {
+        id: 5,
+        skillHeader: 'Data Structures',
+        skills: 'JavaScript, C++, Python'
+    },
+    {
+        id: 6,
+        skillHeader: 'Databases',
+        skills: 'MongoDB, mySQL'
+    }
+]
