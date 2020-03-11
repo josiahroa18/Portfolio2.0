@@ -5,6 +5,7 @@ import Main from './components/Main';
 import ProjectPage from './components/Projects/ProjectPage';
 import SkillPage from './components/Skills/SkillPage';
 import AboutPage from './components/About/AboutPage';
+import ContactPage from './components/Contact/ContactPage';
 import { AppContainer } from './styles/StyledComponents';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
       </Route>
       <Route path='/about'>
         <AboutPage/>
+      </Route>
+      <Route path='/contact'>
+        <ContactPage/>
       </Route>
     </AppContainer>
   );

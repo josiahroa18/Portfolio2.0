@@ -14,10 +14,20 @@ export const AppContainer = styled.div`
     margin: 0;
 `;
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled.section`
     width: 100%;
     display: flex;
     flex-direction: column;
+`;
+
+export const HighlightText = styled.a`
+    color: ${props => props.about ?  theme.colors.lightBlue : theme.colors.pink};
+    margin: 0;
+    display: inline;
+    font-size: ${props => props.about ? '1.3rem' : theme.fontSizes.title};
+    text-align: center;
+    font-family: ${theme.font};
+    cursor: ${props => props.about ? 'pointer' : 'default'};
 `;
 
 /* ------- Title Styles ------- */
@@ -118,14 +128,6 @@ export const Text = styled.h1`
     text-align: center;
 `;
 
-export const HighlightText = styled.span`
-    color: ${theme.colors.pink};
-    margin: 0;
-    display: inline;
-    font-size: ${theme.fontSizes.title};
-    text-align: center;
-    font-family: ${theme.font};
-`;
 /* ------- Social Bar Styles ------- */
 export const SocialBarContainer = styled.div`
     position: fixed;
@@ -176,18 +178,15 @@ export const ProjectContainer = styled.div`
 export const ProjectCardContainer = styled.div`
     width: 300px;
     height: 300px;
-    margin: 10px;
     position: relative;
 `;
 
 export const ProjectImage = styled.img`
     width: 300px;
     height: 300px;
-    filter: ${props => props.hover ? 'blur(5px)' : 'none'};
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    opacity: ${props => props.hover ? '0' : '1'};
+    transition: opacity .25s ease-in-out;
+
 `;
 
 export const ProjectTitle = styled.h1`
@@ -204,11 +203,9 @@ export const ProjectTitle = styled.h1`
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
-
     font-family: ${theme.font};
     font-size: 2rem;
-    color: ${theme.colors.darkBlue};
-    text-shadow: 0 0 3px ${theme.colors.lightBlue}, 0 0 3px ${theme.colors.lightBlue}; 
+    color: ${theme.colors.black};
 `;
 
 export const ProjectButton = styled.button`
@@ -225,14 +222,22 @@ export const ProjectButton = styled.button`
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
-    width: 200px;
+    width: 220px;
     background: none;
     font-family: ${theme.font};
-    font-size: 2rem;
+    font-size: 1.8rem;
     border: 2px solid ${theme.colors.lightBlue};
-    color: ${theme.colors.pink};
+    color: ${theme.colors.black};
     cursor: pointer;
     outline: none;
+    ${theme.breakpoints.tablet}{
+        font-size: 1.3rem;
+    }
+    &:hover{
+        background-color: ${theme.colors.lightBlue};
+        color: ${theme.colors.white};
+        transition: color, background-color .55s ease-in-out;
+    }
 `;
 
 export const DetailsContainer = styled.div`
@@ -359,4 +364,50 @@ export const DataStructuresIcon = styled(DataUsage)`
 export const DataBaseIcon = styled(Database)`
     color: ${theme.colors.lightBlue};
     width: 70px;
+`;
+
+/* ------- About Page Styles ------- */
+export const AboutContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 20px;
+    ${theme.breakpoints.tablet}{
+        flex-direction: column;
+    }
+`;
+
+export const AboutImg = styled.img`
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+`;
+
+export const AboutContent = styled.div`
+    width: 500px;
+    margin-left: 30px;
+    ${theme.breakpoints.tablet}{
+        text-align: center;
+        margin: 20px 20px;
+        width: 100%;
+    }
+`;
+
+export const AboutTitle = styled.h1`
+    font-family: ${theme.font};
+    font-size: 2rem;
+    font-weight: bold;
+`;
+
+export const AboutText = styled.p`
+    font-family: ${theme.font};
+    font-size: 1.3rem;
+    margin-top: 10px;
+    line-height: 25px;
+    font-weight: light;
+`;
+
+export const AboutSkillsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
 `;
