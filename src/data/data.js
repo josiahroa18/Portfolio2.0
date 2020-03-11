@@ -17,7 +17,7 @@ export const data = [
         roles: ['Devlope Landing Page', 'Link to web-application'],
         img: '/assets/symphinity.png',
         github: 'https://github.com/spotify-song-suggester-2/marketing-page',
-        deployed: ''
+        deployed: 'https://symphinity-landing.netlify.com/'
     }
 ]
 

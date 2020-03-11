@@ -3,8 +3,8 @@ import { SkillCardContainer, SkillHeader, SkillText } from '../../styles/StyledC
 import { JavaScriptIcon, BackEndIcon, VersionControlIcon, IndustryKnowledgeIcon, DataStructuresIcon, DataBaseIcon } from '../../styles/StyledComponents';
 
 function SkillCard({skill}){
+    
     let icon;
-
     switch(skill.id){
         case 1:
             icon = <JavaScriptIcon/>;

@@ -194,7 +194,17 @@ export const ProjectTitle = styled.h1`
     display: ${props => props.hover ? 'block' : 'none'};
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+
     font-family: ${theme.font};
     font-size: 2rem;
     color: ${theme.colors.darkBlue};
@@ -205,7 +215,17 @@ export const ProjectButton = styled.button`
     display: ${props => props.hover ? 'block' : 'none'};
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 200px;
     background: none;
     font-family: ${theme.font};
     font-size: 2rem;
