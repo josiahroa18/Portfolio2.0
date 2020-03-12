@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import theme from './theme';
-import { Github, Twitter, Linkedin, Instagram, Javascript } from '@styled-icons/boxicons-logos'
+import { Github, Twitter, Linkedin, Instagram, Javascript, Trello } from '@styled-icons/boxicons-logos'
 import { GitBranch } from '@styled-icons/boxicons-regular';
-import { DeveloperBoard, DataUsage } from '@styled-icons/material';
+import { DeveloperBoard, DataUsage, Person } from '@styled-icons/material';
 import { PersonDoneOutline } from '@styled-icons/evaicons-outline';
 import { Database } from '@styled-icons/fa-solid';
+import { Chat } from '@styled-icons/entypo';
+import { Like } from '@styled-icons/boxicons-solid';
 
 /* ------- App Styles ------- */
 export const AppContainer = styled.div`
@@ -313,10 +315,12 @@ export const DetailsLink = styled.a`
 
 /* ------- Skill Page Styles ------- */
 export const SkillContainer = styled(ProjectContainer)`
+    width: 90%;
+    max-width: 1400px;
 `;
 
 export const SkillCardContainer = styled.div`
-    width: 350px;
+    width: 330px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -396,18 +400,58 @@ export const AboutContent = styled.div`
 export const AboutTitle = styled.h1`
     font-family: ${theme.font};
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: ${props => props.intro ? 'bold' : 'none'};
+    text-align: ${props => props.intro ? 'left' : 'center'};
+    ${theme.breakpoints.tablet}{
+        text-align: center;
+    }
 `;
 
 export const AboutText = styled.p`
     font-family: ${theme.font};
     font-size: 1.3rem;
+    font-size: ${props => props.intro ? '1.3rem' : '1.1rem'};
     margin-top: 10px;
     line-height: 25px;
     font-weight: light;
+    text-align: ${props => props.intro ? 'left' : 'center'};
+    ${theme.breakpoints.tablet}{
+        text-align: center;
+    }
 `;
 
-export const AboutSkillsContainer = styled.div`
+export const AboutSkillsContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+    margin-bottom: 50px;
+`;
+
+export const AboutSkillCard = styled.div`
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 10px;
+`;
+
+export const LeaderIcon = styled(Person)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
+`;
+
+export const ChatIcon = styled(Chat)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
+`;
+
+export const OrganizedIcon = styled(Trello)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
+`;
+
+export const PersonableIcon = styled(Like)`
+    color: ${theme.colors.lightBlue};
+    width: 70px;
 `;
