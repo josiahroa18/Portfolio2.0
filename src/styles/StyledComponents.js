@@ -23,7 +23,7 @@ export const ContentContainer = styled.section`
 `;
 
 export const HighlightText = styled.a`
-    color: ${props => props.about ?  theme.colors.lightBlue : theme.colors.pink};
+    color: ${theme.colors.pink};
     margin: 0;
     display: inline;
     font-size: ${props => props.about ? '1.3rem' : theme.fontSizes.title};
@@ -64,9 +64,6 @@ export const HeaderContainer = styled.header`
     flex-direction: ${props => props.expand ? 'column' : 'row'};
     align-items: ${props => props.expand ? 'flex-start' : 'center'};
     justify-content: space-between;
-`;
-
-export const Nav = styled.nav`
 `;
 
 export const HeaderImage = styled.img`
@@ -169,7 +166,7 @@ export const LinkedInLogo = styled(Linkedin)`
 
 
 /* ------- Project Page Styles ------- */
-export const ProjectContainer = styled.div`
+export const ProjectContainer = styled.section`
     margin: 0 auto;
     width: 80%;
     display: flex;
@@ -417,6 +414,7 @@ export const AboutText = styled.p`
     text-align: ${props => props.intro ? 'left' : 'center'};
     ${theme.breakpoints.tablet}{
         text-align: center;
+        padding: 0 30px;
     }
 `;
 
@@ -429,7 +427,7 @@ export const AboutSkillsContainer = styled.section`
 `;
 
 export const AboutSkillCard = styled.div`
-    width: 330px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -454,4 +452,57 @@ export const OrganizedIcon = styled(Trello)`
 export const PersonableIcon = styled(Like)`
     color: ${theme.colors.lightBlue};
     width: 70px;
+`;
+
+/* ------- Contact Page Styles ------- */
+export const FormContainer = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const Error = styled.p`
+    color: ${theme.colors.pink};
+    font-family: ${theme.font};
+    font-size: 1.1rem;
+`;
+
+export const ContactLabel = styled.label`
+    margin: 10px 0;
+    font-family: ${theme.font};
+    font-size: 1.3rem;
+`;
+
+export const ContactInput = styled.input`
+    font-family: ${theme.font};
+    margin: 10px 0;
+    height: 30px;
+    width: 300px;
+    font-size: 1.2rem;
+    border: 1px solid ${theme.colors.black};
+`;
+
+export const ContactTextArea = styled.textarea`
+    font-family: ${theme.font};
+    height: 200px;
+    width: 300px;
+    resize: none;
+    font-size: 1.2rem;
+    border: 1px solid ${theme.colors.black};
+`;
+
+export const ContactSubmit = styled.input`
+    margin: 20px 0;
+    width: 150px;
+    height: 50px;
+    font-family: ${theme.font};
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid ${theme.colors.lightBlue};
+    &:hover{
+        background-color: ${theme.colors.lightBlue};
+        color: ${theme.colors.white};
+        transition: color, background-color .55s ease;
+    }
 `;
