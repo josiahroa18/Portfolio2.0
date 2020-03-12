@@ -5,7 +5,7 @@ function DesktopNav({profileImage, handleClick, selection}){
     return (
         <HeaderContainer>
             <HeaderImage src={profileImage}></HeaderImage>
-            <Nav>
+            <nav>
                 <StyledLink 
                     to='/' 
                     id={0} 
@@ -42,7 +42,7 @@ function DesktopNav({profileImage, handleClick, selection}){
                     onClick={handleClick}
                     selected={selection === 5 ? '#E3266D' : '#FFFFFF'}
                 >Resume</StyledLink>
-            </Nav>
+            </nav>
         </HeaderContainer>
     );
 }

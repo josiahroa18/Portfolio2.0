@@ -24,6 +24,8 @@ function SkillCard({skill}){
         case 6:
             icon = <DataBaseIcon/>;
             break;
+        default:
+            icon = <JavaScriptIcon/>;
     }
 
     return(
