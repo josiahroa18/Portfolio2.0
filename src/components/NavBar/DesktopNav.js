@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderContainer, Nav, HeaderImage, StyledLink } from '../../styles/StyledComponents';
+import { HeaderContainer, HeaderImage, StyledLink } from '../../styles/StyledComponents';
 
 function DesktopNav({profileImage, handleClick, selection}){
     return (
