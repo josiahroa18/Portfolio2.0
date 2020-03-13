@@ -1,6 +1,5 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import SocialBar from './SocialBar';
 import { Motion, spring } from 'react-motion';
 import theme from '../styles/theme';
 import { MainContainer, TextContainer, Text, HighlightText } from '../styles/StyledComponents';

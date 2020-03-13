@@ -2,12 +2,13 @@ import React from 'react';
 import Title from '../Title';
 import ProfileImage from '../../assets/profile_image.jpg';
 import AboutSkills from './AboutSkills';
-import { ContentContainer, AboutContainer, AboutImg, 
+import SocialBar from '../SocialBar';
+import { AboutBody, AboutContainer, AboutImg, 
     AboutContent, AboutTitle, AboutText, HighlightText } from '../../styles/StyledComponents';
 
 function AboutPage(){
     return(
-        <ContentContainer>
+        <AboutBody>
             <Title title={'About'}/>
             <AboutContainer>
                 <AboutImg src={ProfileImage}/>
@@ -26,7 +27,8 @@ function AboutPage(){
                 </AboutContent>
             </AboutContainer>
             <AboutSkills/>
-        </ContentContainer>
+            <SocialBar/>
+        </AboutBody>
     );
 }
 
