@@ -52,6 +52,7 @@ export const Bar = styled.div`
     height: 5px;
     margin-top: 10px;
     background-color: ${props => props.contact ? theme.colors.pink : theme.colors.black};
+    -webkit-appearance: none;
 `;
 
 /* ------- Header Styles ------- */
@@ -474,8 +475,9 @@ export const PersonableIcon = styled(Like)`
 export const FormBody = styled(ContentContainer)`
     background-color: ${theme.colors.darkGrey};
     position: absolute;
-    height: calc(100% - 85px);
+    height: 100%;
     display: flex;
+    overflow: auto;
 `;
 
 export const FormContainer = styled.form`
@@ -518,6 +520,7 @@ export const ContactTextArea = styled.textarea`
 
 export const ContactSubmit = styled.input`
     margin: 20px 0;
+    margin-bottom: 50px;
     width: 150px;
     height: 50px;
     font-family: ${theme.font};
@@ -527,6 +530,7 @@ export const ContactSubmit = styled.input`
     border-radius: 0;
     color: ${theme.colors.white};
     background-color: ${theme.colors.lightBlue};
+    -webkit-appearance: none;
     &:hover{
         background-color: ${theme.colors.white};
         color: ${theme.colors.lightBlue};
