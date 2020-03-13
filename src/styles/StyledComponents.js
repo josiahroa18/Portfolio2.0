@@ -129,14 +129,17 @@ export const Text = styled.h1`
 
 /* ------- Social Bar Styles ------- */
 export const SocialBarContainer = styled.div`
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
+    justify-content: center;
+    padding: 20px 0;
+    width: 750px;
+    background-color: ${theme.colors.darkGrey};
+    margin: 0 auto;
+    border-radius: 10px;
+    ${theme.breakpoints.tablet}{
+        width: 100%;
+        border-radius: 0;
+    }
 `;
 
 export const SocialLink = styled.a`
@@ -147,21 +150,25 @@ export const SocialLink = styled.a`
 export const GitHubLogo = styled(Github)`
     color: ${theme.colors.lightBlue};
     width: 40px;
+    margin: 0 10px;
 `;
 
 export const TwitterLogo = styled(Twitter)`
     color: ${theme.colors.lightBlue};
     width: 40px;
+    margin: 0 10px;
 `;
 
 export const InstagramLogo = styled(Instagram)`
     color: ${theme.colors.lightBlue};
     width: 40px;
+    margin: 0 10px;
 `;
 
 export const LinkedInLogo = styled(Linkedin)`
     color: ${theme.colors.lightBlue};
     width: 40px;
+    margin: 0 10px;
 `;
 
 
@@ -276,6 +283,7 @@ export const DetailsDescription = styled.p`
     font-family: ${theme.font};
     font-size: 1rem;
     color: ${theme.colors.white};
+    line-height: 25px;
 `;
 
 export const Exit = styled.div`
@@ -368,6 +376,11 @@ export const DataBaseIcon = styled(Database)`
 `;
 
 /* ------- About Page Styles ------- */
+export const AboutBody = styled(ContentContainer)`
+    position: absolute;
+    height: calc(100% - 85px);
+`;
+
 export const AboutContainer = styled.div`
     display: flex;
     justify-content: center;
