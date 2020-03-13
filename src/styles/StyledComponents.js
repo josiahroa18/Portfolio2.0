@@ -131,6 +131,7 @@ export const Text = styled.h1`
 export const SocialBarContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px 0;
     width: 750px;
     background-color: ${theme.colors.darkGrey};
@@ -377,7 +378,6 @@ export const DataBaseIcon = styled(Database)`
 
 /* ------- About Page Styles ------- */
 export const AboutBody = styled(ContentContainer)`
-    position: absolute;
     height: calc(100% - 85px);
 `;
 
