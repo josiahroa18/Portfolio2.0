@@ -1,19 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Title from '../Title';
 import { useForm } from 'react-hook-form';
-import { ContentContainer, FormContainer, ContactLabel, ContactInput, ContactTextArea, ContactSubmit, Error } from '../../styles/StyledComponents';
+import axios from 'axios';
+import { FormBody, FormContainer, ContactLabel, ContactInput, ContactTextArea, ContactSubmit, Error } from '../../styles/StyledComponents';
 
 function ContactPage(){
-    const { register, handleSubmit, errors, reset } = useForm();
+    const [ isSubmitting, setIsSubmitting ] = useState(false);
+    const [ formData, setFormData ] = useState({});
+    const { register, handleSubmit, errors } = useForm();
     const onSubmit = (data, e) => { 
+        // console.log(data);
+        setIsSubmitting(true);
+        setFormData(data);
         e.target.reset();
-        console.log(data);
     };
 
+    useEffect(() => {
+        if(formData && isSubmitting){
+            axios({
+                method: 'post',
+                url: '/',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                data: {'contact': 'contact', ...formData}
+            })
+            .then(res => {
+                console.log(res);
+                setIsSubmitting(false);
+            })
+            .catch(err => {
+                console.log(err);
+                setIsSubmitting(false);
+            })
+        }
+    }, [isSubmitting]);
+
     return(
-        <ContentContainer>
-            <Title title={'Contact Me'}/>
-            <FormContainer data-netlify='true' method='POST' name='contact' onSubmit={handleSubmit(onSubmit)}>
+        <FormBody>
+            <Title title={'Contact Me'} contact={true}/>
+            <FormContainer onSubmit={handleSubmit(onSubmit)}>
                 <ContactLabel>Name</ContactLabel>
                 <ContactInput
                     name='name'
@@ -45,9 +69,9 @@ function ContactPage(){
                 {errors.message && errors.message.type === 'required' && <Error>Please enter a message</Error>}
                 {errors.message && errors.message.type === 'minLength' && <Error>Message must be at least 3 characters long!</Error>}
                 {errors.message && errors.message.type === 'maxLength' && <Error>Message cannot exceed 500 characters!</Error>}
-                <ContactSubmit type='submit'/>
+                <ContactSubmit type='submit' disabled={isSubmitting}/>
             </FormContainer>
-        </ContentContainer>
+        </FormBody>
     );
 }
 

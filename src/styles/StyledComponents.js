@@ -41,7 +41,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const TitleStyle = styled.h1`
-    color: ${theme.colors.black};
+    color: ${props => props.contact ? theme.colors.white : theme.colors.black};
     font-size: 3rem;
     font-family: ${theme.font};
 `;
@@ -51,7 +51,7 @@ export const Bar = styled.div`
     width: 100px;
     height: 5px;
     margin-top: 10px;
-    background-color: ${theme.colors.black};
+    background-color: ${props => props.contact ? theme.colors.pink : theme.colors.black};
 `;
 
 /* ------- Header Styles ------- */
@@ -422,8 +422,11 @@ export const AboutSkillsContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px auto;
+    margin: 50px auto;
     margin-bottom: 50px;
+    ${theme.breakpoints.tablet}{
+        margin: 5px auto;
+    }
 `;
 
 export const AboutSkillCard = styled.div`
@@ -455,6 +458,13 @@ export const PersonableIcon = styled(Like)`
 `;
 
 /* ------- Contact Page Styles ------- */
+export const FormBody = styled(ContentContainer)`
+    background-color: ${theme.colors.darkGrey};
+    position: absolute;
+    height: calc(100% - 85px);
+    display: flex;
+`;
+
 export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
@@ -471,6 +481,7 @@ export const ContactLabel = styled.label`
     margin: 10px 0;
     font-family: ${theme.font};
     font-size: 1.3rem;
+    color: ${theme.colors.white}
 `;
 
 export const ContactInput = styled.input`
@@ -488,6 +499,7 @@ export const ContactTextArea = styled.textarea`
     width: 300px;
     resize: none;
     font-size: 1.2rem;
+    margin: 10px 0;
     border: 1px solid ${theme.colors.black};
 `;
 
@@ -498,11 +510,13 @@ export const ContactSubmit = styled.input`
     font-family: ${theme.font};
     font-size: 1.2rem;
     cursor: pointer;
+    border: none;
     border-radius: 0;
-    border: 1px solid ${theme.colors.lightBlue};
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.lightBlue};
     &:hover{
-        background-color: ${theme.colors.lightBlue};
-        color: ${theme.colors.white};
+        background-color: ${theme.colors.white};
+        color: ${theme.colors.lightBlue};
         transition: color, background-color .55s ease;
     }
 `;
