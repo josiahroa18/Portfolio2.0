@@ -26,7 +26,6 @@ class ResumePage extends React.Component{
                         <Page pageNumber={pageNumber} />
                     </Document>
                 </div>
-                <button></button>
             </ContentContainer>
         );
     }

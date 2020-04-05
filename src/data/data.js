@@ -14,10 +14,20 @@ export const data = [
         projectName: 'Symphinity', 
         techStack: 'HTML, LESS, JavaScript',
         projectDescription: 'A web-application that links to Spotify to end endless searching for music related to your interests. Worked with a team to develop a full-stack application.',
-        roles: ['Devlope Landing Page', 'Link to web-application'],
+        roles: ['Devloped Landing Page', 'Link to web-application'],
         img: '/assets/symphinity.png',
         github: 'https://github.com/spotify-song-suggester-2/marketing-page',
         deployed: 'https://symphinity-landing.netlify.com/'
+    },
+    {
+        id: 3,
+        projectName: 'Flatten The Curve',
+        teckStack: 'React.js, Firebase',
+        projectDescription: 'Worked with an amazing team to help people flatten the curve during the COVID-19 outbreak. GeoFenced messaging to help those near you is the main highlight of this web-app.',
+        roles: ['Developed Message Board', 'Developed GeoFence Logic'],
+        img: '/assets/flatten-the-cruve.png',
+        github: 'https://github.com/FlattenTheCurve19/Front-End',
+        deployed: 'https://flatten-the-curve19.now.sh/message-map-page'
     }
 ]
 

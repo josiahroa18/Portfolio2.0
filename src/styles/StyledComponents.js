@@ -187,6 +187,7 @@ export const ProjectCardContainer = styled.div`
     width: 300px;
     height: 300px;
     position: relative;
+    text-align: center;
 `;
 
 export const ProjectImage = styled.img`
