@@ -14,7 +14,7 @@ export const data = [
         projectName: 'Symphinity', 
         techStack: 'HTML, LESS, JavaScript',
         projectDescription: 'A web-application that links to Spotify to end endless searching for music related to your interests. Worked with a team to develop a full-stack application.',
-        roles: ['Devloped Landing Page', 'Link to web-application'],
+        roles: ['Developed Landing Page', 'Link to web-application'],
         img: '/assets/symphinity.png',
         github: 'https://github.com/spotify-song-suggester-2/marketing-page',
         deployed: 'https://symphinity-landing.netlify.com/'
@@ -40,7 +40,7 @@ export const skillData = [
     {
         id: 2,
         skillHeader: 'Back-End Engineering',
-        skills: 'Node.js, Postman API'
+        skills: 'Node.js/Express, Postman API'
     },
     {
         id: 3,
@@ -60,6 +60,6 @@ export const skillData = [
     {
         id: 6,
         skillHeader: 'Databases',
-        skills: 'MongoDB, mySQL'
+        skills: 'MongoDB, mySQL, Knex.js'
     }
 ]
