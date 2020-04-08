@@ -1,20 +1,20 @@
 {
   "short_name": "Josiah Roa",
-  "name": "Josiah Roa's Portfolio",
+  "name": "Josiah Roa - Software Developer",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./assets/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "./assets/profile_image.jpg",
-      "type": "image/jpg",
+      "src": "./assets/favicon.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./assets/profile_image.jpg",
-      "type": "image/jpg",
+      "src": "./assets/favicon.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
