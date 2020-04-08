@@ -7,7 +7,6 @@ import SkillPage from './pages/SkillPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ResumePage from './pages/ResumePage';
-// import { AppContainer } from './styles/StyledComponents';
 
 function App() {
   return (

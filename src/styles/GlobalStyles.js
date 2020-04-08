@@ -15,7 +15,8 @@ export const HighlightText = styled.a`
 
 /* ------- Title Styles ------- */
 export const TitleContainer = styled.div`
-    margin: 50px auto;
+    margin: 0 auto;
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
