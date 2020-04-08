@@ -13,7 +13,6 @@ export const Container = styled.section`
         max-width: 800px;
         display: flex;
         justify-content: space-around;
-        align-items: flex-start;
         .text-container{
             width: 300px;
         }
@@ -36,13 +35,13 @@ export const Container = styled.section`
             margin-bottom: 30px;
         }
         .bar {
-            width: 100px;
+            width: 102px;
             height: 1px;
             background-color: ${theme.colors.pink};
             margin-bottom: 20px;
         }
         .long {
-            width: 150px;
+            width: 160px;
         }
         ${theme.breakpoints.tablet}{
             margin-top: 20px;

@@ -15,44 +15,73 @@ const useStyles = makeStyles(theme => ({
 
 export default () => {
     const [ isSubmitting, setIsSubmitting ] = useState(false);
-    const [ formData, setFormData ] = useState(null);
+    const [ formData, setFormData ] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [ errors, setErrors ] = useState([]);
     const classes = useStyles();
 
-    const onSubmit = (data, e) => {
+    const handleSubmit = e => {
+        // Check for errors here
+        e.preventDefault();
         setIsSubmitting(true);
-        setFormData(data);
-        e.target.reset();
+        setFormData({
+            name: '',
+            email: '',
+            message: ''
+        })
     };
 
-    useEffect(() => {
-        if(formData && isSubmitting){
-            axios({
-                method: 'post',
-                url: 'https://api.slapform.com/josiahroa18@gmail.com',
-                data: {...formData}
-            })
-            .then(res => {
-                console.log(res);
-                setIsSubmitting(false);
-            })
-            .catch(err => {
-                console.log(err);
-                setIsSubmitting(false);
-            })
-        }
-    }, [isSubmitting, formData]);
+    const handleChange = e => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    // useEffect(() => {
+    //     if(isSubmitting){
+    //         axios({
+    //             method: 'post',
+    //             url: 'https://api.slapform.com/josiahroa18@gmail.com',
+    //             data: {...formData}
+    //         })
+    //         .then(res => {
+    //             console.log(res);
+    //             setIsSubmitting(false);
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //             setIsSubmitting(false);
+    //         })
+    //     }
+    // }, [isSubmitting]);
 
     return (
         <>
             <Form>
                 <label>Name</label>
-                <input/>
+                <input
+                    name='name'
+                    onChange={handleChange}
+                    value={formData.name}
+                />
                 <label>Email</label>
-                <input/>
+                <input
+                    name='email'
+                    onChange={handleChange}
+                    value={formData.email}
+                />
                 <label>Message</label>
-                <textarea/>
+                <textarea
+                    name='message'
+                    onChange={handleChange}
+                    value={formData.message}
+                />
                 <div className='button-container'>
-                    <div className='button' type='submit'>Submit</div>
+                    <div className='button' type='submit' onClick={handleSubmit}>Submit</div>
                 </div>
             </Form>
             <Backdrop className={classes.backdrop} open={isSubmitting}>

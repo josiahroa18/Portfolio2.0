@@ -12,7 +12,7 @@ export default () => {
                     <h1>Want to work together?</h1>
                     <div className='bar long'/>
                     <p className='margin-bottom'>Leave a message and I will get back to you as soon as possible!</p>
-                    <h1>Direct contact information</h1>
+                    <h1>Contact me directtly</h1>
                     <div className='bar'/>
                     <p>Phone: 720-799-6277</p>
                     <p>Email: josiahroa18@gmail.com</p>
