@@ -1,8 +1,8 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { Motion, spring } from 'react-motion';
-import theme from '../theme';
-import { MainContainer, TextContainer, Text, HighlightText } from '../styles/StyledComponents';
+import theme from '../styles/theme';
+import { MainContainer, HighlightText } from '../styles/GlobalStyles';
 
 export default () => {
     return (
@@ -12,14 +12,14 @@ export default () => {
                 style={{opacity: spring(1, {stiffness: 10, damping: 10})}}
             >
             {style => (
-                <TextContainer style={{opacity: style.opacity}}>
-                    <Text>Hello, I'm <HighlightText>Josiah Roa</HighlightText>,</Text>
-                    <Text>I'm a full-stack web developer.</Text>
-                </TextContainer>
+                <div style={{opacity: style.opacity}} className='text-container'>
+                    <h1>Hello, I'm <HighlightText>Josiah Roa</HighlightText>,</h1>
+                    <h1>I'm a full-stack web developer.</h1>
+                </div>
             )}
             </Motion>
             <Particles
-                height= 'calc(100vh - 85px)'
+                height= 'calc(100vh - 80px)'
                 style={{
                     backgroundColor: `${theme.colors.darkGrey}`
                 }}

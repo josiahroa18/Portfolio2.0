@@ -7,11 +7,11 @@ import SkillPage from './pages/SkillPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ResumePage from './pages/ResumePage';
-import { AppContainer } from './styles/StyledComponents';
+// import { AppContainer } from './styles/StyledComponents';
 
 function App() {
   return (
-    <AppContainer>
+    <div>
       <Header/>
       <Route exact path='/'>
         <Main/>
@@ -31,7 +31,7 @@ function App() {
       <Route path='/resume'>
         <ResumePage/>
       </Route>
-    </AppContainer>
+    </div>
   );
 }
 

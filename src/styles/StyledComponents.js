@@ -1,178 +1,12 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import theme from '../theme';
-import { Github, Twitter, Linkedin, Instagram, Javascript, Trello } from '@styled-icons/boxicons-logos'
+import theme from './theme';
+import { Javascript, Trello } from '@styled-icons/boxicons-logos'
 import { GitBranch } from '@styled-icons/boxicons-regular';
 import { DeveloperBoard, DataUsage, Person } from '@styled-icons/material';
 import { PersonDoneOutline } from '@styled-icons/evaicons-outline';
 import { Database } from '@styled-icons/fa-solid';
 import { Chat } from '@styled-icons/entypo';
 import { Like } from '@styled-icons/boxicons-solid';
-
-/* ------- App Styles ------- */
-export const AppContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    margin: 0;
-`;
-
-export const ContentContainer = styled.section`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-`;
-
-export const HighlightText = styled.a`
-    color: ${theme.colors.pink};
-    margin: 0;
-    display: inline;
-    font-size: ${props => props.about ? '1.3rem' : theme.fontSizes.title};
-    text-align: center;
-    font-family: ${theme.font};
-    cursor: ${props => props.about ? 'pointer' : 'default'};
-`;
-
-/* ------- Title Styles ------- */
-export const TitleContainer = styled.div`
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
-export const TitleStyle = styled.h1`
-    color: ${props => props.contact ? theme.colors.white : theme.colors.black};
-    font-size: 3rem;
-    font-family: ${theme.font};
-`;
-
-export const Bar = styled.div`
-    position: relative;
-    width: 100px;
-    height: 5px;
-    margin-top: 10px;
-    background-color: ${props => props.contact ? theme.colors.pink : theme.colors.black};
-    -webkit-appearance: none;
-`;
-
-/* ------- Header Styles ------- */
-export const HeaderContainer = styled.header`
-    background-color: ${theme.colors.darkBlue};
-    border-bottom: 5px solid ${theme.colors.lightBlue};
-    width: 100%;
-    height: ${props => props.expand ? '440px' : '80px'};
-    display: flex;
-    flex-direction: ${props => props.expand ? 'column' : 'row'};
-    align-items: ${props => props.expand ? 'flex-start' : 'center'};
-    justify-content: space-between;
-`;
-
-export const HeaderImage = styled.img`
-    border-radius: 50%;
-    border: 1px solid ${theme.colors.pink};
-    width: 60px;
-    height: 60px;
-    margin-left: 10px;
-`;
-
-export const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: ${props => props.selected};
-    margin: ${props => props.mobile ? '20px 0' : '0 20px'};
-    font-size: 1.2rem;
-    font-family: ${theme.font};
-    text-align: center;
-    &:hover{
-        color: ${theme.colors.pink};
-        transition: color 1s ease;
-    };
-`;
-
-export const HamburgerContainer = styled.div`
-    cursor: pointer;
-    margin-right: 20px;
-`;
-
-export const MobileContainer = styled(HeaderContainer)`
-    position: absolute;
-    border: none
-`;
-
-export const MobileNavContainer = styled.nav`
-    display: ${props => props.open ? 'flex' : 'none'};
-    position: relative;
-    top: 80px;
-    flex-direction: column;
-    margin: 0 auto;
-`;
-
-
-/* ------- Main Page Styles ------- */
-export const MainContainer = styled.div`
-    position: relative;
-    height: calc(100vh - 85px);
-`;
-
-export const TextContainer = styled.div`
-    position: absolute;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-`;
-
-export const Text = styled.h1`
-    font-family: ${theme.font};
-    color: ${theme.colors.white};
-    font-size: ${theme.fontSizes.title};
-    text-align: center;
-`;
-
-/* ------- Social Bar Styles ------- */
-export const SocialBarContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    width: 750px;
-    background-color: ${theme.colors.darkGrey};
-    margin: 0 auto;
-    border-radius: 10px;
-    ${theme.breakpoints.tablet}{
-        width: 100%;
-        border-radius: 0;
-    }
-`;
-
-export const SocialLink = styled.a`
-    text-decoration: none;
-    cursor: pointer;
-`;
-
-export const GitHubLogo = styled(Github)`
-    color: ${theme.colors.lightBlue};
-    width: 40px;
-    margin: 0 10px;
-`;
-
-export const TwitterLogo = styled(Twitter)`
-    color: ${theme.colors.lightBlue};
-    width: 40px;
-    margin: 0 10px;
-`;
-
-export const InstagramLogo = styled(Instagram)`
-    color: ${theme.colors.lightBlue};
-    width: 40px;
-    margin: 0 10px;
-`;
-
-export const LinkedInLogo = styled(Linkedin)`
-    color: ${theme.colors.lightBlue};
-    width: 40px;
-    margin: 0 10px;
-`;
-
 
 /* ------- Project Page Styles ------- */
 export const ProjectContainer = styled.section`
@@ -379,7 +213,7 @@ export const DataBaseIcon = styled(Database)`
 `;
 
 /* ------- About Page Styles ------- */
-export const AboutBody = styled(ContentContainer)`
+export const AboutBody = styled.section`
     height: calc(100% - 85px);
 `;
 
@@ -473,7 +307,7 @@ export const PersonableIcon = styled(Like)`
 `;
 
 /* ------- Contact Page Styles ------- */
-export const FormBody = styled(ContentContainer)`
+export const FormBody = styled.section`
     background-color: ${theme.colors.darkGrey};
     position: absolute;
     height: 100%;

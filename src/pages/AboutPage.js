@@ -4,7 +4,8 @@ import ProfileImage from '../assets/profile_image.jpg';
 import AboutSkills from '../components/About/AboutSkills';
 import SocialBar from '../components/SocialBar';
 import { AboutBody, AboutContainer, AboutImg, 
-    AboutContent, AboutTitle, AboutText, HighlightText } from '../styles/StyledComponents';
+    AboutContent, AboutTitle, AboutText } from '../styles/StyledComponents';
+import { HighlightText } from '../styles/GlobalStyles';
 
 export default () => {
     return(

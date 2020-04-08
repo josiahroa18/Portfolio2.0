@@ -3,7 +3,7 @@ import { Motion, spring } from 'react-motion';
 import Title from './Title';
 import ProjectCard from '../components/Projects/ProjectCard';
 import ProjectDetails from '../components/Projects/ProjectDetails';
-import { ContentContainer, ProjectContainer } from '../styles/StyledComponents';
+import { ProjectContainer } from '../styles/StyledComponents';
 import { data } from '../data/data';
 
 // Material UI Imports 
@@ -38,7 +38,7 @@ export default () => {
     }
 
     return(
-        <ContentContainer>
+        <section>
             <Title title={'Projects'}></Title>
             <Motion
                 defaultStyle={{opacity: 0}}
@@ -62,6 +62,6 @@ export default () => {
                     handleToggle={handleToggle}
                 />}
             </Backdrop>
-        </ContentContainer>
+        </section>
     );
 }

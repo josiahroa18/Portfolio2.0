@@ -1,21 +1,21 @@
 import React from 'react';
-import { SocialBarContainer, SocialLink, GitHubLogo, TwitterLogo, InstagramLogo, LinkedInLogo } from '../styles/StyledComponents';
+import { SocialBarContainer, GitHubLogo, TwitterLogo, InstagramLogo, LinkedInLogo } from '../styles/GlobalStyles';
 
 function SocialBar(){
     return(
         <SocialBarContainer>
-            <SocialLink target='_blank' href='https://github.com/josiahroa18'>
+            <a target='_blank' href='https://github.com/josiahroa18' rel="noopener noreferrer">
                 <GitHubLogo/>
-            </SocialLink>
-            <SocialLink target='_blank' href='https://twitter.com/josiah_roa'>
+            </a>
+            <a target='_blank' href='https://twitter.com/josiah_roa' rel="noopener noreferrer">
                 <TwitterLogo/>
-            </SocialLink>
-            <SocialLink target='_blank' href='https://www.instagram.com/josiahroa/'>
+            </a>
+            <a target='_blank' href='https://www.instagram.com/josiahroa/' rel="noopener noreferrer">
                 <InstagramLogo/>
-            </SocialLink>
-            <SocialLink target='_blank' href='https://www.linkedin.com/in/josiah-roa/'>
+            </a>
+            <a target='_blank' href='https://www.linkedin.com/in/josiah-roa/' rel="noopener noreferrer">
                 <LinkedInLogo/>
-            </SocialLink>
+            </a>
         </SocialBarContainer>
     );
 }

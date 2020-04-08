@@ -1,6 +1,5 @@
 import React from 'react';
 import Title from '../../pages/Title';
-import { ContentContainer } from '../../styles/StyledComponents';
 import './Resume.css'
 import { Document, Page ,pdfjs } from 'react-pdf';
 import resume from '../../assets/resume.pdf';
@@ -19,14 +18,14 @@ class Resume extends React.Component{
     render(){
         const { pageNumber} = this.state;
         return(
-            <ContentContainer>
+            <section>
                 <Title title={'Resume'}/>
                 <div className="resume-container">
                     <Document file={resume} onLoadSuccess={this.onDocumentLoadSuccess}> 
                         <Page pageNumber={pageNumber} />
                     </Document>
                 </div>
-            </ContentContainer>
+            </section>
         );
     }
 }
