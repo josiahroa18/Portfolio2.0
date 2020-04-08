@@ -20,18 +20,22 @@ export default () => {
         email: '',
         message: ''
     });
-    const [ errors, setErrors ] = useState([]);
+    const [ error, setError ] = useState(false);
     const classes = useStyles();
 
     const handleSubmit = e => {
-        // Check for errors here
         e.preventDefault();
-        setIsSubmitting(true);
-        setFormData({
-            name: '',
-            email: '',
-            message: ''
-        })
+        if(formData.name && formData.email && formData.message && !isSubmitting){
+            setIsSubmitting(true);
+            setFormData({
+                name: '',
+                email: '',
+                message: ''
+            })
+        }else{
+            setError(true);
+        }
+        
     };
 
     const handleChange = e => {
@@ -39,29 +43,32 @@ export default () => {
             ...formData,
             [e.target.name]: e.target.value
         })
+        if(formData.name && formData.email && formData.message){
+            setError(false);
+        }
     }
 
-    // useEffect(() => {
-    //     if(isSubmitting){
-    //         axios({
-    //             method: 'post',
-    //             url: 'https://api.slapform.com/josiahroa18@gmail.com',
-    //             data: {...formData}
-    //         })
-    //         .then(res => {
-    //             console.log(res);
-    //             setIsSubmitting(false);
-    //         })
-    //         .catch(err => {
-    //             console.log(err);
-    //             setIsSubmitting(false);
-    //         })
-    //     }
-    // }, [isSubmitting]);
+    useEffect(() => {
+        if(isSubmitting){
+            axios({
+                method: 'post',
+                url: 'https://api.slapform.com/josiahroa18@gmail.com',
+                data: {...formData}
+            })
+            .then(res => {
+                console.log(res);
+                setIsSubmitting(false);
+            })
+            .catch(err => {
+                console.log(err);
+                setIsSubmitting(false);
+            })
+        }
+    }, [isSubmitting, formData]);
 
     return (
         <>
-            <Form>
+            <Form error={error}>
                 <label>Name</label>
                 <input
                     name='name'
@@ -80,8 +87,9 @@ export default () => {
                     onChange={handleChange}
                     value={formData.message}
                 />
+                {error && <p className='error'>Please fill out all fields</p>}
                 <div className='button-container'>
-                    <div className='button' type='submit' onClick={handleSubmit}>Submit</div>
+                    <div className='button' type='submit' disabled={isSubmitting} onClick={handleSubmit}>Submit</div>
                 </div>
             </Form>
             <Backdrop className={classes.backdrop} open={isSubmitting}>

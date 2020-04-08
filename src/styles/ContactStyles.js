@@ -80,6 +80,7 @@ export const Form = styled.form`
     }
     .button-container {
         margin-top: 30px;
+        margin-top: ${props => props.error ? '10px' : '30px'};
         display: flex;
         width: 100%;
         justify-content: flex-end;
@@ -100,6 +101,11 @@ export const Form = styled.form`
                 transition: color, background-color .5s ease;
             }
         }
+    }
+    p.error {
+        color: ${theme.colors.pink};
+        margin-top: 10px;
+        text-align: right;
     }
     ${theme.breakpoints.tablet}{
         margin-top: 80px;
