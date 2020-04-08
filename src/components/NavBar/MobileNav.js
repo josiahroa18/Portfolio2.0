@@ -44,7 +44,7 @@ function MobileNav({profileImage, handleClick, selection}){
                                     handleMenuClick();
                                 }}
                                 selected={selection === 0}
-                                mobile
+                                mobile='true'
                             >Home</StyledLink>
                             <StyledLink 
                                 to='/projects' 
@@ -54,7 +54,7 @@ function MobileNav({profileImage, handleClick, selection}){
                                     handleMenuClick();
                                 }}
                                 selected={selection === 1}
-                                mobile
+                                mobile='true'
                             >Projects</StyledLink>
                             <StyledLink 
                                 to='/skills' 
@@ -64,7 +64,7 @@ function MobileNav({profileImage, handleClick, selection}){
                                     handleMenuClick();
                                 }}
                                 selected={selection === 2}
-                                mobile
+                                mobile='true'
                             >Skills</StyledLink>
                             <StyledLink 
                                 to='/about' 
@@ -74,7 +74,7 @@ function MobileNav({profileImage, handleClick, selection}){
                                     handleMenuClick();
                                 }}
                                 selected={selection === 3}
-                                mobile
+                                mobile='true'
                             >About</StyledLink>
                             <StyledLink 
                                 to='/contact'
@@ -84,7 +84,7 @@ function MobileNav({profileImage, handleClick, selection}){
                                     handleMenuClick();
                                 }}
                                 selected={selection === 4}
-                                mobile
+                                mobile='true'
                             >Contact</StyledLink>
                             <StyledLink 
                                 to='/resume'
@@ -94,7 +94,7 @@ function MobileNav({profileImage, handleClick, selection}){
                                     handleMenuClick();
                                 }}
                                 selected={selection === 5}
-                                mobile
+                                mobile='true'
                             >Resume</StyledLink>
                         </MobileNavContainer>
                         )}

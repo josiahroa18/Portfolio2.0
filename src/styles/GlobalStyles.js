@@ -11,6 +11,9 @@ export const HighlightText = styled.a`
     text-align: center;
     font-family: ${theme.font};
     cursor: ${props => props.about ? 'pointer' : 'default'};
+    ${theme.breakpoints.tablet}{
+        font-size: ${props => props.about ? '1.3rem' : '2rem'};
+    }
 `;
 
 /* ------- Title Styles ------- */
@@ -104,8 +107,45 @@ export const MainContainer = styled.div`
             color: ${theme.colors.white};
             font-size: ${theme.fontSizes.title};
             text-align: center;
+            ${theme.breakpoints.tablet}{
+                font-size: 2rem;
+            }
         }
     }
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px auto;
+        width: 100%;
+        justify-content: center;
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid ${theme.colors.lightBlue};
+            font-family: ${theme.font};
+            font-size: 1.3rem;
+            width: 120px;
+            height: 30px;
+            margin: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: ${theme.colors.lightBlue};
+                transition: background-color .5s ease;
+            }
+            ${theme.breakpoints.tablet}{
+                border: 1px solid ${theme.colors.lightBlue};
+            }
+        }
+        ${theme.breakpoints.tablet}{
+            margin: 30px auto;
+        }
+    }
+`;
+
+export const ButtonLink = styled(Link)`
+    text-decoration: none;
+    color: ${theme.colors.white};
 `;
 
 /* ------- Social Bar Styles ------- */

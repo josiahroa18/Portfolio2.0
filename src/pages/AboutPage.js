@@ -14,10 +14,11 @@ export default () => {
             <AboutContainer>
                 <AboutImg src={ProfileImage}/>
                 <AboutContent>
-                    <AboutTitle intro>Who am I?</AboutTitle>
-                    <AboutText intro>
+                    <AboutTitle intro="true">Who am I?</AboutTitle>
+                    <AboutText intro="true">
                         I am a Software Developer student at <HighlightText 
-                            about href='https://lambdaschool.com/' 
+                            about='true'
+                            href='https://lambdaschool.com/' 
                             target='_blank'
                             >
                                 Lambda School
