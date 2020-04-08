@@ -1,12 +1,12 @@
 import React from 'react';
-import Title from '../Title';
-import ProfileImage from '../../assets/profile_image.jpg';
-import AboutSkills from './AboutSkills';
-import SocialBar from '../SocialBar';
+import Title from './Title';
+import ProfileImage from '../assets/profile_image.jpg';
+import AboutSkills from '../components/About/AboutSkills';
+import SocialBar from '../components/SocialBar';
 import { AboutBody, AboutContainer, AboutImg, 
-    AboutContent, AboutTitle, AboutText, HighlightText } from '../../styles/StyledComponents';
+    AboutContent, AboutTitle, AboutText, HighlightText } from '../styles/StyledComponents';
 
-function AboutPage(){
+export default () => {
     return(
         <AboutBody>
             <Title title={'About'}/>
@@ -31,5 +31,3 @@ function AboutPage(){
         </AboutBody>
     );
 }
-
-export default AboutPage;

@@ -1,12 +1,12 @@
 import React from 'react';
-import Title from '../Title';
+import Title from '../../pages/Title';
 import { ContentContainer } from '../../styles/StyledComponents';
 import './Resume.css'
 import { Document, Page ,pdfjs } from 'react-pdf';
 import resume from '../../assets/resume.pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-class ResumePage extends React.Component{
+class Resume extends React.Component{
     state = {
         numPages: null,
         pageNumber: 1,
@@ -29,7 +29,6 @@ class ResumePage extends React.Component{
             </ContentContainer>
         );
     }
-    
 }
 
-export default ResumePage;
+export default Resume;

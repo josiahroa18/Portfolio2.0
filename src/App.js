@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Header from './components/Header';
-import Main from './components/Main';
-import ProjectPage from './components/Projects/ProjectPage';
-import SkillPage from './components/Skills/SkillPage';
-import AboutPage from './components/About/AboutPage';
-import ContactPage from './components/Contact/ContactPage';
-import ResumePage from './components/Resume/ResumePage';
+import Main from './pages/Main';
+import ProjectPage from './pages/ProjectsPage';
+import SkillPage from './pages/SkillPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import ResumePage from './pages/ResumePage';
 import { AppContainer } from './styles/StyledComponents';
 
 function App() {

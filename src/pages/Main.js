@@ -1,10 +1,10 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { Motion, spring } from 'react-motion';
-import theme from '../styles/theme';
+import theme from '../theme';
 import { MainContainer, TextContainer, Text, HighlightText } from '../styles/StyledComponents';
 
-function Main(){
+export default () => {
     return (
         <MainContainer>
             <Motion
@@ -56,5 +56,3 @@ function Main(){
         </MainContainer>
     );
 }
-
-export default Main;

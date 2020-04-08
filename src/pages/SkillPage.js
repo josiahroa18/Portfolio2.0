@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Title from '../Title';
-import SkillCard from './SkillCard';
-import { ContentContainer, SkillContainer } from '../../styles/StyledComponents';
-import { skillData } from '../../data/data';
+import Title from './Title';
+import SkillCard from '../components/Skills/SkillCard';
+import { ContentContainer, SkillContainer } from '../styles/StyledComponents';
+import { skillData } from '../data/data';
 
-function SkillPage(){
+export default () => {
     const [ skills, setSkills ] = useState([]);
 
     useEffect(() => {
@@ -22,5 +22,3 @@ function SkillPage(){
         </ContentContainer>
     );
 }
-
-export default SkillPage;

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Motion, spring } from 'react-motion';
-import Title from '../Title';
-import ProjectCard from './ProjectCard';
-import ProjectDetails from './ProjectDetails';
-import { ContentContainer, ProjectContainer } from '../../styles/StyledComponents';
-import { data } from '../../data/data';
+import Title from './Title';
+import ProjectCard from '../components/Projects/ProjectCard';
+import ProjectDetails from '../components/Projects/ProjectDetails';
+import { ContentContainer, ProjectContainer } from '../styles/StyledComponents';
+import { data } from '../data/data';
 
 // Material UI Imports 
 import Backdrop from '@material-ui/core/Backdrop';
@@ -16,9 +16,9 @@ const useStyles = makeStyles(theme => ({
       zIndex: theme.zIndex.drawer + 1,
       color: '#fff',
     },
-  }));
+}));
 
-function ProjectPage(){
+export default () => {
     const [ projects, setProjects ] = useState([]);
     const [ open, setOpen ] = React.useState(false);
     const [ currentId, setCurrentId ] = useState(0);
@@ -63,7 +63,5 @@ function ProjectPage(){
                 />}
             </Backdrop>
         </ContentContainer>
-    )
+    );
 }
-
-export default ProjectPage;

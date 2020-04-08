@@ -3,7 +3,7 @@ import { Motion, spring } from 'react-motion';
 
 import { HeaderContainer, HeaderImage, HamburgerContainer, MobileContainer, MobileNavContainer, StyledLink } from '../../styles/StyledComponents';
 import HamburgerMenu from 'react-hamburger-menu';
-import theme from '../../styles/theme';
+import theme from '../../theme';
 
 
 function MobileNav({profileImage, handleClick, selection}){

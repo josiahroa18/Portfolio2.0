@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import theme from './theme';
+import theme from '../theme';
 import { Github, Twitter, Linkedin, Instagram, Javascript, Trello } from '@styled-icons/boxicons-logos'
 import { GitBranch } from '@styled-icons/boxicons-regular';
 import { DeveloperBoard, DataUsage, Person } from '@styled-icons/material';

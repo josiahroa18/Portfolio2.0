@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Title from '../Title';
+import Title from './Title';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { FormBody, FormContainer, ContactLabel, ContactInput, ContactTextArea, ContactSubmit, Error } from '../../styles/StyledComponents';
+import { FormBody, FormContainer, ContactLabel, ContactInput, ContactTextArea, ContactSubmit, Error } from '../styles/StyledComponents';
 
 import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function ContactPage(){
+export default () => {
     const [ isSubmitting, setIsSubmitting ] = useState(false);
     const [ formData, setFormData ] = useState(null);
     const { register, handleSubmit, errors } = useForm();
@@ -88,5 +88,3 @@ function ContactPage(){
         </FormBody>
     );
 }
-
-export default ContactPage;
