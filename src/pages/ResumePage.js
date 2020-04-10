@@ -1,10 +1,15 @@
 import React from 'react';
-import Resume from '../components/Resume';
+import resume from '../assets/resume.png';
+import Title from './Title';
+import { Resume } from '../styles/ResumeStyles';
 
 export default () => {
     return (
-        <>
-            <Resume/>
-        </>
+        <Resume>
+            <Title title={'Resume'}/>
+            <div className='resume-container'>
+                <img src={resume}/>
+            </div>
+        </Resume>
     )
 }
