@@ -3,12 +3,12 @@ import resume from '../assets/resume.png';
 import Title from './Title';
 import { Resume } from '../styles/ResumeStyles';
 
-export default () => {
+export default () => {    
     return (
         <Resume>
             <Title title={'Resume'}/>
             <div className='resume-container'>
-                <img src={resume}/>
+                <img src={resume} alt='Resume'/>
             </div>
         </Resume>
     )

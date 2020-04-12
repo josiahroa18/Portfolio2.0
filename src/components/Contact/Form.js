@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default () => {
+export default ({ toggleSuccess }) => {
     const [ isSubmitting, setIsSubmitting ] = useState(false);
     const [ formData, setFormData ] = useState({
         name: '',
@@ -27,11 +27,6 @@ export default () => {
         e.preventDefault();
         if(formData.name && formData.email && formData.message && !isSubmitting){
             setIsSubmitting(true);
-            setFormData({
-                name: '',
-                email: '',
-                message: ''
-            })
         }else{
             setError(true);
         }
@@ -50,17 +45,17 @@ export default () => {
 
     useEffect(() => {
         if(isSubmitting){
-            axios({
-                method: 'post',
-                url: 'https://api.slapform.com/josiahroa18@gmail.com',
-                data: {...formData}
-            })
-            .then(res => {
-                console.log(res);
+            axios.post('https://josiahroa.herokuapp.com/messages', formData)
+            .then(() => {
                 setIsSubmitting(false);
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: ''
+                })
+                toggleSuccess();
             })
-            .catch(err => {
-                console.log(err);
+            .catch(() => {
                 setIsSubmitting(false);
             })
         }

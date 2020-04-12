@@ -111,3 +111,26 @@ export const Form = styled.form`
         margin-top: 80px;
     }
 `;
+
+export const Success = styled.div`
+    width: 300px;
+    background-color: ${theme.colors.white};
+    padding: 40px;
+    position: relative;
+    p {
+        font-family: ${theme.font};
+        text-align: center;
+        font-size: 1.5rem;
+        color: ${theme.colors.lightBlue};
+    }
+    .close {
+        color: ${theme.colors.pink};
+        font-family: ${theme.font};
+        font-size: 1.5rem;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+`;
+
